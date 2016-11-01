@@ -5,7 +5,7 @@
 ---
 
 ## How to?
-Just write__
+Just write
 ```shell
 command fortune security
 ```
