@@ -1,5 +1,5 @@
 builddir = /home/aurelien/git/fortune-mod-security
-pkgbuild_sha256sum = 4e1de22bda48ec1fb6f90a690af6e6cbb69d37e7e8c0592c92c62d3f700e51b9
+pkgbuild_sha256sum = ec46ce7e108c1e1939d6b2f57c232c08d6c0116c5d064886b79810a36143630e
 buildenv = !distcc
 buildenv = color
 buildenv = !ccache

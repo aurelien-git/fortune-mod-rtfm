@@ -25,3 +25,4 @@ package() {
   install -D -m644 "${srcdir}/security" "${pkgdir}/usr/share/fortune/security"
   install -D -m644 "${srcdir}/security.dat" "${pkgdir}/usr/share/fortune/security.dat"
 }
+md5sums=('c809d7c5cb91fcc14c3ea89c72a35c69')
