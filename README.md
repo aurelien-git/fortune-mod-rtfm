@@ -5,6 +5,9 @@
 ---
 
 ## How to?
+git clone the stuff, then pacman -U fortune-mod-security.xz__
+and__
+
 Just write
 ```shell
 command fortune security
