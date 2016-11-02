@@ -1,12 +1,12 @@
 # fortune-mod-security
-> Because security is also a cool way to learn tips and tricks in CS__
+> Because security is also a cool way to learn tips and tricks in CS
 > here a fortune-mod for that
 
 ---
 
 ## How to?
-git clone the stuff, then pacman -U fortune-mod-security.xz__
-and__
+git clone the stuff, then pacman -U fortune-mod-security.xz
+and
 
 Just write
 ```shell
