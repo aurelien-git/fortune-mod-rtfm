@@ -26,4 +26,7 @@ package() {
   install -D -m644 "${srcdir}/security.dat" "${pkgdir}/usr/share/fortune/security.dat"
 }
 md5sums=('573a566bcc133adac789bfe4f6b4a3d2')
+<<<<<<< HEAD
 md5sums=('cd053587bb9f361b30fb2adb0aa6ca43')
+=======
+>>>>>>> 4db075106c7b8c8c6a6604b193d2c26edde03d29
