@@ -9,7 +9,7 @@ license=('custom')
 depends=('fortune-mod')
 groups=('fortune-mods')
 source=('fortune-security')
-md5sums=('573a566bcc133adac789bfe4f6b4a3d2')
+
 url="ftp://ftp.hackers.camp/fortune-security"
 
 build() {
