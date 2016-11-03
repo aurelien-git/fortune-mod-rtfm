@@ -1,16 +1,16 @@
-# fortune-mod-security
-> Because security is also a cool way to learn tips and tricks in CS
+# fortune-mod-rtfm
+> Because the manual is that thing you try to read ever to late
 > here a fortune-mod for that
 
 ---
 
 ## How to?
-git clone the stuff, then pacman -U fortune-mod-security.xz
+git clone the stuff, then pacman -U fortune-mod-rtfm.xz
 and
 
 Just write
 ```shell
-command fortune security
+command fortune rtfm
 ```
 To your .bashrc
 

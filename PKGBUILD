@@ -1,28 +1,31 @@
 # Contributor: aurélien DESBRIÈRES <aurelien@hackers.camp>
 
-pkgname=fortune-mod-security
-pkgver=20161102
-pkgrel=2
-pkgdesc="Fortune cookies: Security & Hardening"
+pkgname=fortune-mod-rtfm
+pkgver=20161103
+pkgrel=3
+pkgdesc="Fortune cookies: Read The Fucking Manual! Because most of people read them to late."
 arch=('any')
 license=('custom')
 depends=('fortune-mod')
 groups=('fortune-mods')
-source=('fortune-security')
-md5sums=('573a566bcc133adac789bfe4f6b4a3d2')
-url="ftp://ftp.hackers.camp/fortune-security"
+source=('fortune-rtfm')
+
+
+
+url="ftp://ftp.hackers.camp/fortune-rtfm"
 
 build() {
   if true; then # change true to false to have pure ASCII quotes
-    cp "${srcdir}/fortune-security" "${srcdir}/security"
+    cp "${srcdir}/fortune-rtfm" "${srcdir}/rtfm"
   else
-    sed "s/’/'/g; s/é/e/g; s/è/e/g;" "${srcdir}/fortune-security" > "${srcdir}/security"
+    sed "s/’/'/g; s/é/e/g; s/è/e/g;" "${srcdir}/fortune-rtfm" > "${srcdir}/rtfm"
   fi
-  strfile "${srcdir}/security" "${srcdir}/security.dat"
+  strfile "${srcdir}/rtfm" "${srcdir}/rtfm.dat"
 }
 
 package() {
-  install -D -m644 "${srcdir}/security" "${pkgdir}/usr/share/fortune/security"
-  install -D -m644 "${srcdir}/security.dat" "${pkgdir}/usr/share/fortune/security.dat"
+  install -D -m644 "${srcdir}/rtfm" "${pkgdir}/usr/share/fortune/rtfm"
+  install -D -m644 "${srcdir}/rtfm.dat" "${pkgdir}/usr/share/fortune/rtfm.dat"
 }
+
 md5sums=('c809d7c5cb91fcc14c3ea89c72a35c69')
