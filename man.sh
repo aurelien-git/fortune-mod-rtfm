@@ -19,5 +19,5 @@ done < man > man1
 # add the % to each empty line
 sed -i -e 's/^$/%/' man1
 
-# merge to fortune-security db
-cat man1 > fortune-security
+# merge to fortune-rtfm db
+cat man1 > fortune-rtfm
