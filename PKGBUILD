@@ -1,17 +1,15 @@
 # Contributor: aurélien DESBRIÈRES <aurelien@hackers.camp>
 
 pkgname=fortune-mod-rtfm
-pkgver=20161103
-pkgrel=3
+pkgver=20161104
+pkgrel=4
 pkgdesc="Fortune cookies: Read The Fucking Manual! Because most of people read them to late."
 arch=('any')
 license=('custom')
 depends=('fortune-mod')
 groups=('fortune-mods')
 source=('fortune-rtfm')
-
-
-
+md5sums=('60c61f79673ba6528adb4398ed64bd50')
 url="ftp://ftp.hackers.camp/fortune-rtfm"
 
 build() {
@@ -28,4 +26,4 @@ package() {
   install -D -m644 "${srcdir}/rtfm.dat" "${pkgdir}/usr/share/fortune/rtfm.dat"
 }
 
-md5sums=('c809d7c5cb91fcc14c3ea89c72a35c69')
+md5sums=('3eb6def3cbff562feb545f73fbc0a0d3')
