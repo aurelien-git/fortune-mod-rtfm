@@ -18,6 +18,6 @@ To your .bashrc
 Have fun!
 
 
-### Bug ... Wishes or anything else?
+#### Bug ... Wishes or anything else?
 aurelien@hackers.camp
 

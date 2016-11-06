@@ -1,29 +1,32 @@
-# Contributor: aurélien DESBRIÈRES <aurelien@hackers.camp>
+# Maintainer (Parabola) : Aurélien DESBRIÈRES <aurelien@hackers.camp>
 
-pkgname=fortune-mod-rtfm
-pkgver=20161104
-pkgrel=4
-pkgdesc="Fortune cookies: Read The Fucking Manual! Because most of people read them to late."
+_pkgname=paraboley
+pkgname=${_pkgname}-git
+pkgver=6
+pkgrel=1
+pkgdesc="Python script to display system infomation alongside the Parabola GNU / Linux-libre logo."
 arch=('any')
-license=('custom')
-depends=('fortune-mod')
-groups=('fortune-mods')
-source=('fortune-rtfm')
-md5sums=('60c61f79673ba6528adb4398ed64bd50')
-url="ftp://ftp.hackers.camp/fortune-rtfm"
+url="https://projects.parabola.nu/paraboley.git"
+license=('GPL')
+depends=('python')
+makedepends=('git' 'python-distribute')
+optdepends=(
+'python-mpd-git: python libary for mpd interaction',
+'python-logbook-git: for logging'
+'imagemagick: for default screenshot command'
+)
+conflicts=()
+provides=('paraboley')
+source=("git://projects.parabola.nu/paraboley.git")
+md5sums=('SKIP')
 
-build() {
-  if true; then # change true to false to have pure ASCII quotes
-    cp "${srcdir}/fortune-rtfm" "${srcdir}/rtfm"
-  else
-    sed "s/’/'/g; s/é/e/g; s/è/e/g;" "${srcdir}/fortune-rtfm" > "${srcdir}/rtfm"
-  fi
-  strfile "${srcdir}/rtfm" "${srcdir}/rtfm.dat"
+pkgver() {
+	cd ${_pkgname}
+    git rev-list --count HEAD
 }
 
 package() {
-  install -D -m644 "${srcdir}/rtfm" "${pkgdir}/usr/share/fortune/rtfm"
-  install -D -m644 "${srcdir}/rtfm.dat" "${pkgdir}/usr/share/fortune/rtfm.dat"
+	cd "$_pkgname"
+	python setup.py install --root=${pkgdir}
+	install -D -m644 COPYING ${pkgdir}/usr/share/licenses/paraboley/COPYING
 }
-
-md5sums=('3eb6def3cbff562feb545f73fbc0a0d3')
